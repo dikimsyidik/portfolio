@@ -16,11 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from portfolio_app import views
+from django.conf import settings
 
 urlpatterns = [
     url(r'^$', views.index,name='index'),
     url(r'^admin/', admin.site.urls),
-    
+
 ]
 if settings.DEBUG:
     urlpatterns += patterns('',
